@@ -7,18 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hire Local Workers Online</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="multi_color_border"></div>
-        <div class="top_nav">
+    <header class="wrapper">
+        <nav class="multi_color_border"></nav>
+        <nav class="top_nav">
             <div class="left">
               <div class="logo"><img src="img/logo.png" alt="logo"></div>
-              <div class="search_bar">
-                  <input type="text" placeholder="Search">
-              </div>
-          </div> 
+              <form action="#" class = "search-bar">
+                <input type="text" placeholder="Search">
+                <button type="submit"><i class='bx bx-search'></i></button>
+              </form>
+            </div> 
           <div class="right">
             <ul>
               <li><a href="#">Whats Next</a></li>
@@ -27,8 +29,8 @@
               <li><a href="#">Post a Job</a></li>
             </ul>
           </div>
-        </div>
-        <div class="bottom_nav">
+        </nav>
+        <nav class="bottom_nav">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Profile</a></li>
@@ -39,16 +41,81 @@
             <li><a href="#">Map</a></li>
             <li><a href="#">Articles</a></li>
           </ul>
-      </div>
-      
-      
-    </div>
+        </nav>
+    </header>
 
-    <!-- <footer>
-        <div class="center">
-            Copyright &copy; www.SKillIndia.com All Rights Reserved
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+          <h2>Delete this later</h2>
+          <div class="text-sci">
+            <h2>Welcome!<br>To Our Website.<span></span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, fugit!</p>
+          </div>
         </div>
-    </footer> -->
+         
+        <div class="logreg-box">
+          <div class="form-box login">
+            <form action="#">
+              <h2>Sign In</h2>
+
+              <div class="input-box">
+                <span class="icon"><i class='bx bxs-phone'></i></span>
+                <input type="tel" required>
+                <label>Mobile No</label>
+              </div>
+
+              <div class="input-box">
+                <span class="icon"><i class='bx bxs-lock-alt' ></i></box-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+              </div>
+
+              <div class="remember-forgot">
+                <label><input type="checkbox">Remember Me</label>
+                <a href="#">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn">Sign In</button>
+              <div class="login-register">
+                <p>Dont't have an account? <a href="#" class="register-link">Sign Up</a></p>
+              </div>
+            </form>
+          </div>
+          <div class="form-box register">
+            <form action="#">
+              <h2>Sign Up</h2>
+
+              <div class="input-box">
+                <span class="icon"><i class='bx bxs-user'></i></span>
+                <input type="text" required>
+                <label>Name</label>
+              </div>
+
+              <div class="input-box">
+                <span class="icon"><i class='bx bxs-phone'></i></span>
+                <input type="tel" required>
+                <label>Mobile No</label>
+              </div>
+
+              <div class="input-box">
+                <span class="icon"><i class='bx bxs-lock-alt' ></i></box-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+              </div>
+
+              <div class="remember-forgot">
+                <label><input type="checkbox">I agree to the terms & conditions</label>
+              </div>
+              <button type="submit" class="btn">Sign Up</button>
+              <div class="login-register">
+                <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 
 </html>
