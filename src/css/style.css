@@ -210,24 +210,24 @@
   color: #494949;
 }
 
-.logreg-box .form-box .login {
+.logreg-box .form-box.login {
   transform: translateX(0);
   transition: transform .6s ease;
   transition-delay: .7s;
 }
 
-.logreg-box.active .form-box .login {
+.logreg-box.active .form-box.login {
   transform: translateX(430px);
   transition-delay: 0s;
 }
 
-.logreg-box .form-box .register {
+.logreg-box .form-box.register {
   transform: translateX(430px);
   transition: transform .6s ease;
   transition-delay: 0s;
 }
 
-.logreg-box.active .form-box .register {
+.logreg-box.active .form-box.register {
   transform: translateX(0);
   transition-delay: .7s
 }
