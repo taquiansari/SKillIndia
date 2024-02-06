@@ -5,17 +5,20 @@ from django.shortcuts import render, HttpResponse
 def HomePage(request):
     return render(request, 'home.html')
 
+def ProfilePage(request):
+    return render(request, 'profile.html')
+
 def AboutPage(request):
-    pass
+    return render(request, 'about.html')
 
 def ServicePage(request):
-    pass
+    return render(request, 'service.html')
 
 def ContactPage(request):
-    pass
+    return render(request, 'contact.html')
 
-def SignupPage(request):
-    pass
+# def SignupPage(request):
+#     return render(request, 'service.html')
 
-def LoginPage(request):
-    pass
+# def LoginPage(request):
+#     return render(request, 'service.html')
