@@ -9,20 +9,21 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-.wrapper{
+.wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
 }
-.wrapper .multi_color_border{
+
+.wrapper .multi_color_border {
   width: 100%;
   height: 5px;
-  background: linear-gradient(to right, #37a000 0% , #37a000 25%, #494949 25%, #494949 50%, #37a000 50%, #37a000 75%, #494949 75%, #494949 100%);
+  background: linear-gradient(to right, #37a000 0%, #37a000 25%, #494949 25%, #494949 50%, #37a000 50%, #37a000 75%, #494949 75%, #494949 100%);
 }
 
-.wrapper .top_nav{
+.wrapper .top_nav {
   margin-top: 0px;
   width: 100%;
   height: 65px;
@@ -33,12 +34,12 @@
   align-items: center;
 }
 
-.wrapper .top_nav .left{
+.wrapper .top_nav .left {
   display: flex;
   align-items: center;
 }
 
-.wrapper .top_nav .left .logo img{
+.wrapper .top_nav .left .logo img {
   height: 55px;
   margin-top: 25px;
   margin-bottom: 20px;
@@ -46,7 +47,7 @@
   margin-right: 45px;
 }
 
-.search-bar{
+.search-bar {
   width: 200px;
   height: 30px;
   background: transparent;
@@ -57,7 +58,7 @@
 
 }
 
-.search-bar input{
+.search-bar input {
   width: 100%;
   background: transparent;
   border: none;
@@ -67,11 +68,11 @@
   padding-left: 10px;
 }
 
-.search-bar input::placeholder{
+.search-bar input::placeholder {
   color: #494949;
 }
 
-.search-bar button{
+.search-bar button {
   width: 40px;
   height: 100%;
   background: transparent;
@@ -83,44 +84,44 @@
   cursor: pointer;
 }
 
-.wrapper .top_nav .right ul{
+.wrapper .top_nav .right ul {
   display: flex;
 }
 
-.wrapper .top_nav .right ul li{
+.wrapper .top_nav .right ul li {
   margin: 0 12px;
 }
 
-.wrapper .top_nav .right ul li:last-child{
-  background:  #37a000;
+.wrapper .top_nav .right ul li:last-child {
+  background: #37a000;
   margin-right: 0;
   border-radius: 2px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
-.wrapper .top_nav .right ul li:hover:last-child{
+.wrapper .top_nav .right ul li:hover:last-child {
   background: #494949;
 }
 
-.wrapper .top_nav .right ul li a{
+.wrapper .top_nav .right ul li a {
   display: block;
   padding: 8px 10px;
   color: #666666;
 }
 
-.wrapper .top_nav .right ul li:last-child a{
-   color: #fff;
+.wrapper .top_nav .right ul li:last-child a {
+  color: #fff;
 }
 
-.wrapper .bottom_nav{
+.wrapper .bottom_nav {
   width: 100%;
   background: #f9f9f9;
   height: 45px;
   padding: 0 50px;
 }
 
-.wrapper .bottom_nav ul{
+.wrapper .bottom_nav ul {
   width: 100%;
   height: 45px;
   display: flex;
@@ -128,24 +129,24 @@
   align-items: center;
 }
 
-.wrapper .bottom_nav ul li a{
+.wrapper .bottom_nav ul li a {
   color: #494949;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 12px;
 }
 
-.background{
+.background {
   width: 100%;
   height: 100vh;
-  background: url('background.jpg') no-repeat ;
+  background: url('background.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   filter: blur(10px);
 }
 
-.container{
-  position:absolute;
+.container {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -158,7 +159,7 @@
   margin-top: 48px;
 }
 
-.container .content{
+.container .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -170,6 +171,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  transition: transform 0.5s, background 0.5s;
 }
 
 .container .logreg-box {
@@ -178,19 +180,18 @@
   right: 0;
   width: calc(100% - 58%);
   height: 100%;
-  overflow: hidden;
 }
 
-.text-sci h2{
-  font-size : 25px;
+.text-sci h2 {
+  font-size: 25px;
   line-height: 1;
 }
 
-.text-sci h2 span{
-  font-size : 25px;
+.text-sci h2 span {
+  font-size: 25px;
 }
 
-.text-sci p{
+.text-sci p {
   font-size: 16px;
   margin: 20px 0px;
   color: #494949;
@@ -203,45 +204,21 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background: transparent;
-  backdrop-filter: blur(200px); 
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   color: #494949;
 }
 
-.logreg-box .form-box.login {
-  transform: translateX(0);
-  transition: transform .6s ease;
-  transition-delay: .7s;
+.logreg-box .form-box h2 {
+  color: #37a000;
 }
 
-.logreg-box.active .form-box.login {
-  transform: translateX(430px);
-  transition-delay: 0s;
-}
-
-.logreg-box .form-box.register {
-  transform: translateX(430px);
-  transition: transform .6s ease;
-  transition-delay: 0s;
-}
-
-.logreg-box.active .form-box.register {
-  transform: translateX(0);
-  transition-delay: .7s
-}
-
-.logreg-box .form-box h2{
-  color:#37a000;
-}
-
-.form-box h2{
+.form-box h2 {
   font-size: 32px;
   text-align: center;
 }
 
-.form-box .input-box{
+.form-box .input-box {
   position: relative;
   width: 340px;
   height: 50px;
@@ -249,7 +226,7 @@
   margin: 30px 0;
 }
 
-.input-box input{
+.input-box input {
   width: 100%;
   height: 100%;
   background: transparent;
@@ -273,19 +250,19 @@
 }
 
 .input-box input:focus~label,
-.input-box input:valid~label{
-      top: -5px;
+.input-box input:valid~label {
+  top: -5px;
 
 }
 
-.input-box .icon{
+.input-box .icon {
   position: absolute;
   top: 13px;
   right: 0;
   font-size: 19px;
 }
 
-.form-box .remember-forgot{
+.form-box .remember-forgot {
   font-size: 14.5px;
   font-weight: 500;
   margin: -15px 0 15px;
@@ -293,7 +270,7 @@
   justify-content: space-between;
 }
 
-.remember-forgot label input{
+.remember-forgot label input {
   accent-color: #494949;
   margin-right: 3px;
 }
@@ -303,11 +280,11 @@
   text-decoration: none;
 }
 
-.remember-forgot a:hover{
+.remember-forgot a:hover {
   text-decoration: underline;
 }
 
-.btn{
+.btn {
   width: 100%;
   height: 45px;
   background: #37a000;
@@ -318,22 +295,159 @@
   font-size: 16px;
   color: #e4e4e4;
   font-weight: 500;
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
-.form-box .login-register{
+.form-box .login-register {
   font-size: 14.5px;
   font-weight: 500;
   text-align: center;
   margin-top: 25px;
 }
 
-.login-register p a{
+.login-register p a {
   color: #494949;
   font-weight: 600;
   text-decoration: none;
 }
 
-.login-register p a:hover{
+.login-register p a:hover {
   text-decoration: underline;
+}
+
+.container-services {
+  position: relative;
+  margin-top: 117px;
+  width: 100%;
+}
+
+.services-boxes {
+  font-family: 'poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fafafa;
+}
+
+.services-boxes h1 {
+  font-size: 3em;
+
+  margin: 25px;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin-top: 30px;
+}
+
+.card {
+  min-height: 220px;
+  width: 320px;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  margin: 10px 4px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+  margin: 20px;
+  color: #37a000;
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.card p {
+  color: #6c757d;
+  text-align: center;
+}
+
+.card:hover i,
+.card:hover p {
+  color: #fff;
+}
+
+.card:hover h2 {
+  font-weight: 600;
+}
+
+.card:nth-child(1):hover {
+  background: linear-gradient(45deg,
+      rgba(55, 160, 0, 0.7) 0%,
+      rgba(55, 160, 0, 0.7) 100%),
+    url('bg.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(2):hover {
+  background: linear-gradient(45deg,
+      rgba(55, 160, 0, 0.7) 0%,
+      rgba(55, 160, 0, 0.7) 100%),
+    url('bg2.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(3):hover {
+  background: linear-gradient(45deg,
+      rgba(55, 160, 0, 0.7) 0%,
+      rgba(55, 160, 0, 0.7) 100%),
+    url('bg3.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(4):hover {
+  background: linear-gradient(45deg,
+      rgba(55, 160, 0, 0.7) 0%,
+      rgba(55, 160, 0, 0.7) 100%),
+    url('bg4.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(5):hover {
+  background: linear-gradient(45deg,
+      rgba(55, 160, 0, 0.7) 0%,
+      rgba(55, 160, 0, 0.7) 100%),
+    url('bg5.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(6):hover {
+  background: linear-gradient(45deg,
+      rgba(55, 160, 0, 0.7) 0%,
+      rgba(55, 160, 0, 0.7) 100%),
+    url('bg2.jpg');
+  background-size: cover;
+}
+
+@media(max-width:991px) {
+  .wrapper {
+    padding: 25px;
+  }
+
+  .wrapper h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+
+  .content-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card {
+    min-width: 300px;
+    margin: 10px auto;
+  }
 }

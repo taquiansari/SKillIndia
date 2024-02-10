@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <div class="content">
+      <h2>Delete this later</h2>
+      <div class="text-sci">
+        <h2>Welcome!!<br>To Our Website.<span></span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, fugit!</p>
+      </div>
+    </div>
+     
+    <div class="logreg-box">
+      <div class="form-box register">
+        <form action="/register">
+          {% csrf_token %}
+          <h2>Register</h2>
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-user'></i></span>
+            <input type="text" name="username" required>
+            <label>Name</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-phone'></i></span>
+            <input type="tel" name="phoneno" required>
+            <label>Mobile No</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-lock-alt' ></i></box-icon></span>
+            <input type="password" name = "passw" required>
+            <label>Password</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label><input type="checkbox">I agree to the terms & conditions</label>
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+          <div class="login-register">
+            <p>Already have an account? <a href="/login">Login </a></p>
+          </div>
+        </form>
+        </div>
+      </div>
+</div>
+{% endblock body %}

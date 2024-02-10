@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <div class="content">
+      <h2>Delete this later</h2>
+      <div class="text-sci">
+        <h2>Welcome!!<br>To Our Website.<span></span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, fugit!</p>
+      </div>
+    </div>
+     
+    <div class="logreg-box">
+      <div class="form-box login">
+        <form action="/login">
+          <h2>Log In</h2>
+
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-phone'></i></span>
+            <input type="tel" name='phoneno' required>
+            <label>Mobile No</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-lock-alt' ></i></box-icon></span>
+            <input type="password" name='passw'required>
+            <label>Password</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label><input type="checkbox">Remember Me</label>
+            <a href="#">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn">Sign In</button>
+          <div class="login-register">
+            <p>Dont't have an account? <a href="/register" >Register</a></p>
+          </div>
+        </form>
+        </div>
+      </div>
+</div>
+{% endblock body %}

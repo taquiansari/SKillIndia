@@ -24,4 +24,5 @@ admin.site.index_title = "Welcome to SKillIndia Portal"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+    path('accounts/', include("django.contrib.auth.urls")),
 ]
