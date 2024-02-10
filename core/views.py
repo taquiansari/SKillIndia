@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render, HttpResponse
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 
@@ -26,41 +26,44 @@ def community(request):
 def register(request):
     
     if request.method == 'POST' :
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email = request.POST['email']
         username = request.POST['username']
-        phoneno = request.POST['phoneno']
-        passw = request.POST['passw']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
         
-        myuser = User.objects.create_user(username, phoneno, passw)
+        myuser = User.objects.create_user(first_name=first_name,last_name=last_name,email=email,username=username,password=password1)
+        
         myuser.save()
         
-        messages.success(request, "Your Account has been succesfully created.")
-        
-        return redirect('login')
+        return redirect('loginn')
     
     return render(request, 'register.html')
 
-def login(request):
+def loginn(request):
     
     if request.method == 'POST' :
-        phoneno = request.POST['phoneno']
-        passw = request.POST['passw']
+        username = request.POST['username']
+        password = request.POST['password']
         
-        user = authenticate(phoneno = phoneno, password = passw)
+        user = auth.authenticate(username=username, password=password)
         
         if user is not None: 
-            login(request, user)
+            auth.login(request,user)
             username = username
-            return render(request,'home.html',{'username': username})
-        else:
-            messages.error(request,"Bad Credentials!")
             return redirect('home')
+        # else:
+        #     messages.error(request,"Bad Credentials!")
+        #     return redirect('home')
     
-    return render(request, 'login.html')
+    return render(request, 'loginn.html')
 
 def logout(request):
-    logout(request)
-    messages.success(request, "Logged Out Successfully!")
-    return redirect('home')
+    pass
+    # logout(request)
+    # messages.success(request, "Logged Out Successfully!")
+    # return redirect('home')
 
 def workerregistration(request):
-    return render(request, 'workerregistration.html')
+    return render(request, 'workerregistration.html ')

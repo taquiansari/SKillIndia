@@ -13,33 +13,49 @@
      
     <div class="logreg-box">
       <div class="form-box register">
-        <form action="/register">
+        <form method="POST" >
           {% csrf_token %}
           <h2>Register</h2>
           <div class="input-box">
-            <span class="icon"><i class='bx bxs-user'></i></span>
-            <input type="text" name="username" required>
-            <label>Name</label>
+            <span class="icon"><i class='bx bxs-user-detail'></i></span>
+            <input type="text" name="first_name" required>
+            <label>First Name</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-user-detail'></i></span>
+            <input type="text" name="last_name" required>
+            <label>Last Name</label>
           </div>
 
           <div class="input-box">
-            <span class="icon"><i class='bx bxs-phone'></i></span>
-            <input type="tel" name="phoneno" required>
-            <label>Mobile No</label>
+            <span class="icon"><i class='bx bxl-gmail'></i></span>
+            <input type="tel" name="email" required>
+            <label>Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-user'></i></span>
+            <input type="text" name="username" required>
+            <label>Username</label>
           </div>
 
           <div class="input-box">
             <span class="icon"><i class='bx bxs-lock-alt' ></i></box-icon></span>
-            <input type="password" name = "passw" required>
+            <input type="password" name = "password1" required>
             <label>Password</label>
           </div>
-
-          <div class="remember-forgot">
-            <label><input type="checkbox">I agree to the terms & conditions</label>
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-lock-alt' ></i></box-icon></span>
+            <input type="password" name = "password2" required>
+            <label>Confirm Password</label>
           </div>
+
+           {% comment %} <div class="remember-forgot">
+            <label><input type="checkbox">I agree to the terms & conditions</label>
+          </div>  {% endcomment %}
           <button type="submit" class="btn">Sign Up</button>
           <div class="login-register">
-            <p>Already have an account? <a href="/login">Login </a></p>
+            <p>Already have an account? <a href="/loginn">Login </a></p>
           </div>
         </form>
         </div>
