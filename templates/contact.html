@@ -8,11 +8,14 @@
         <div class="leftcontact"></div>
         <div class="rightcontact">
             <h2>Contact Us</h2>
-            <input type="text" class="fieldcontact" placeholder="Your Name">
-            <input type="text" class="fieldcontact" placeholder="Your Email">
-            <input type="text" class="fieldcontact" placeholder="Phone">
-            <textarea placeholder="Message" class="fieldcontact"></textarea>
+            <form method="post" action="/contact">
+                {% csrf_token %}
+            <input type="text" class="fieldcontact" placeholder="Your Name" name="name">
+            <input type="email" class="fieldcontact" placeholder="Your Email" name="email">
+            <input type="phone" class="fieldcontact" placeholder="Phone" name="phone">
+            <textarea placeholder="Message" class="fieldcontact" name="desc"></textarea>
             <button class="btncontact">Send</button>
+            </form>
         </div>
     </div>
 </div>

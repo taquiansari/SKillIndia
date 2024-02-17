@@ -42,6 +42,12 @@
         </nav>
     </header>
 
+    {% comment %} {% if messages% %}{% endif %}
+    {% for message in messages %}{% endfor %}
+    <div class="successmessage {{message.tags}}">
+      {{message}}
+    </div>
+    {% endfor %} {% endcomment %}
     {% block body %}{% endblock body %}
 
   <script src="/static/js/script.js"></script>
