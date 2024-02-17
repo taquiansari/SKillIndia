@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"], input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+  </style>
+</head>
+<body>
+  <form>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Create Profile</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Create Profile</h1>
+    <p>A few last details, then you can check and publish your profile.</p>
+    <p>A professional photo helps you build trust with your clients. To keep things safe and simple, they'll pay you which is why we need your personal information.</p>
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <p>
+          <label for="photo">Photo</label>
+          <input type="file" name="photo" id="photo">
+        </p>
+        <p>
+          <label for="dob">Date of Birth *</label>
+          <input type="text" name="dob" value="yyyy-mm-dd" required>
+        </p>
+        <p>
+          <label for="country">Country *</label>
+          <input type="text" name="country" value="India" required>
+        </p>
+        <p>
+          <label for="street">Street address *</label>
+          <input type="text" name="street" required>
+        </p>
+        <p>
+          <label for="city">City*</label>
+          <input type="text" name="city" required>
+        </p>
+        <p>
+          <label for="state">State/Province</label>
+          <input type="text" name="state">
+        </p>
+        <p>
+          <label for="What Skill do You have">Occupation</label>
+          <input type="text" name="Occupation">
+        </p>
+        <p>
+          <label for="zip">ZIP/Postal code *</label>
+          <input type="text" name="zip" required>
+        </p>
+      </fieldset>
+      <input type="submit" value="Save and Continue">
+    </form>
+  </div>
+</body>
+</html>
+  </form>
+  <script>
+    document.getElementById('profileForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  var formData = new FormData(event.target);
+
+  var dob = formData.get('dob');
+  var country = formData.get('country');
+  var street = formData.get('street');
+  var city = formData.get('city');
+  var state = formData.get('state');
+  var suite = formData.get('Occupation');
+  var zip = formData.get('zip');
+
+  console.log('Date of Birth:', dob);
+  console.log('Country:', country);
+  console.log('Street:', street);
+  console.log('City:', city);
+  console.log('State:', state);
+  console.log('Occupation:', Occupation);
+  console.log('ZIP:', zip);
+
+  const form = document.querySelector('form');
+//store data locally
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const formObject = Object.fromEntries(formData.entries());
+
+    localStorage.setItem('formData', JSON.stringify(formObject));
+
+    form.submit();
+});
+
+const formData = JSON.parse(localStorage.getItem('formData'));
+
+if (formData) {
+    // Populate the form fields with the stored data
+    for (const [key, value] of Object.entries(formData)) {
+        const input = document.querySelector(`[name="${key}"]`);
+        if (input) {
+            input.value = value;
+        }
+    }
+}
+
+});
+  </script>
+</body>
+</html>
