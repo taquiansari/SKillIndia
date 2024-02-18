@@ -145,10 +145,27 @@
   filter: blur(10px);
 }
 
+
+.Hcontainer {
+  display: flex;
+  top: 45%;
+  left:40%;
+  align-items: top; 
+  margin-left: 35%;
+  margin-top:100px;
+  text-shadow: 0px 2px 4px gray;
+  height: 100vh;
+  font-size: 30px;
+}
+
+.Alogreg-box {
+  width: 800px;
+}
+
 .container {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 46.5%;
+  left: 15%;
   transform: translate(-50%, -50%);
   width: 75%;
   height: 550px;
@@ -158,6 +175,20 @@
   border-radius: 10px;
   margin-top: 48px;
 }
+
+.Rcontainer {
+    position: absolute;
+    top: 50%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 550px;
+    /* background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center; */
+    border-radius: 10px;
+    margin-top: 48px;
+  }
 
 .container .content {
   position: absolute;
