@@ -2,63 +2,65 @@
 {% block title %}Worker Registration{% endblock title %}
 
 {% block body %}
-<div class="container">
-    <div class="content">
-      <h2>Delete this later</h2>
-      <div class="text-sci">
-        <h2>Welcome!!<br>To Our Website.<span></span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, fugit!</p>
+<div class="container-worreg">
+  <form method="post" class="form">
+    {% csrf_token %}
+    <h2>Worker Registration</h2>
+    <div class="column">
+      <div class="input-box">
+        <input type="text" placeholder="First Name" required >
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Last Name" required >
       </div>
     </div>
-     
-    <div class="logreg-box">
-      <div class="form-box register">
-        <form method="POST" >
-          {% csrf_token %}
-          <h2>Worker Registration</h2>
-          <div class="input-box">
-            <span class="icon"><i class='bx bxs-user-detail'></i></span>
-            <input type="text" name="first_name" required>
-            <label>First Name</label>
-          </div>
-          <div class="input-box">
-            <span class="icon"><i class='bx bxs-user-detail'></i></span>
-            <input type="text" name="last_name" required>
-            <label>Last Name</label>
-          </div>
-
-          <div class="input-box">
-            <span class="icon"><i class='bx bxl-gmail'></i></span>
-            <input type="tel" name="email" required>
-            <label>Email</label>
-          </div>
-
-          <div class="input-box">
-            <span class="icon"><i class='bx bxs-user'></i></span>
-            <input type="text" name="username" required>
-            <label>Username</label>
-          </div>
-
-          <div class="input-box">
-            <span class="icon"><i class='bx bxs-lock-alt' ></i></box-icon></span>
-            <input type="password" name = "password1" required>
-            <label>Password</label>
-          </div>
-          <div class="input-box">
-            <span class="icon"><i class='bx bxs-lock-alt' ></i></box-icon></span>
-            <input type="password" name = "password2" required>
-            <label>Confirm Password</label>
-          </div>
-
-           <div class="remember-forgot">
-            <label><input type="checkbox">I agree to the terms & conditions</label>
-          </div> 
-          <button type="submit" class="btn">Sign Up</button>
-          <div class="login-register">
-            <p>Already have an account? <a href="/loginn">Login </a></p>
-          </div>
-        </form>
+    <div class="column">
+      <div class="input-box">
+        <input type="text" placeholder="Email" required >
+      </div>
+      <div class="input-box">
+        <input type="tel" placeholder="Phone Number" required >
+      </div>
+    </div>
+    <div class="gender-box">
+      <h3>Gender</h3>
+      <div class="gender-option">
+        <div class="gender">
+          <input type="radio" id="check-male" name="gender" checked >
+          <label for="check-male">Male</label>
+        </div>
+        <div class="gender">
+          <input type="radio" id="check-female" name="gender" >
+          <label for="check-female">Female</label>
+        </div>
+        <div class="gender">
+          <input type="radio" id="check-other" name="gender" >
+          <label for="check-other">Prefer not to say</label>
         </div>
       </div>
+    </div>
+    <div class="input-box address">
+      <div class="column">
+        <div class="select-box">
+          <select>
+            <option hidden>Select Profession</option>
+            <option>Sanitary Worker</option>
+            <option>Plumber</option>
+            <option>Electrician</option>
+            <option>Appliance Repair</option>
+            <option>RO Service and Repair</option>
+            <option>Carpenter</option>
+          </select>
+        </div>
+        <input type="text" placeholder="Enter your city" required >
+      </div>
+      <div class="column">
+        <input type="number" placeholder="Enter pincode" required >
+        <input type="text" placeholder="Enter your region" required >
+      </div>
+      <input type="text" placeholder="Enter your address" required >
+    </div>
+    <button type="submit" class="btn">Register</button>
+  </form> 
 </div>
 {% endblock body %}

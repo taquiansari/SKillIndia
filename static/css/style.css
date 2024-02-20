@@ -674,3 +674,112 @@
 	transition: .3s;
   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
+
+/* worker registration  */
+.container-worreg{
+  position: relative;
+  margin-top: 117px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.container-worreg .form{
+  width: 800px;
+}
+
+
+.container-worreg .form h2{
+  font-size: 32px;
+  color: #37a000;
+  text-align: center;
+}
+.container-worreg .form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.container-worreg .form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.container-worreg .input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.container-worreg .form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.container-worreg .form .gender-box {
+  margin-top: 20px;
+  margin-bottom: -12px;
+}
+.container-worreg .gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.container-worreg .form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.container-worreg .form .gender {
+  column-gap: 5px;
+}
+.container-worreg .gender input {
+  accent-color: #37a000;
+}
+.container-worreg .form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.container-worreg .gender label {
+  color: #707070;
+}
+.container-worreg .address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.container-worreg .select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.container-worreg .form button {
+  width: 100%;
+  height: 45px;
+  background: #37a000;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #e4e4e4;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  margin-top: 15px;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .container-worreg .form .column {
+    flex-wrap: wrap;
+  }
+  .container-worreg.form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+} 
