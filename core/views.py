@@ -76,3 +76,6 @@ def logout(request):
 
 def workerregistration(request):
     return render(request, 'workerregistration.html ')
+
+def postjob(request):
+    return render(request, 'postjob.html' )
