@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
-{% block title %}Community{% endblock title %}
+{% block title %}Chat{% endblock title %}
 
-{% block body %}
-This is community block
-
+{% block body  %}
+    <div class="chatpage-container">
+        <div class="chat-container"></div>
+            <div class="typing-container">
+                <div class="typing-content">
+                    <div class="typing-textarea">
+                        <textarea id="chat-input" spellcheck="false" placeholder="Enter a prompt here" required></textarea>
+                        <span id="send-btn" class="material-icons-outlined">Send</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script type="module" src="/static/js/mainModule.js"></script> 
+    <script type="module" src="/static/js/script.js" defer></script> 
 {% endblock body %}
